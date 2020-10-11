@@ -1,0 +1,23 @@
+{
+  "name": "{{APP_NAME}}",
+  "version": "0.1.0",
+  "description": "{{APP_DESCRIPTION}}",
+  "main": "./src/index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon src/index",
+    "prod": "cross-env NODE_ENV=production node src/index"
+  },
+  "author": "{{AUTHOR}}",
+  "license": "{{LICENSE}}",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.1.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "nodemon": "^2.0.4"
+  }
+}
