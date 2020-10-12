@@ -2,11 +2,12 @@
 import * as inquirer from "inquirer";
 import * as fs from "fs";
 import { copy } from "./helpers/copy"
+import { ascii } from "./helpers/ascii"
 import { fileChange } from "./helpers/fileChanger"
 
 var ui = new inquirer.ui.BottomBar();
 
-const TEMPLATE_FOLDER = `${__dirname}/templates/`
+const TEMPLATE_FOLDER = `${__dirname}/../templates`
 
 const frontend = fs.readdirSync(`${TEMPLATE_FOLDER}/frontend`);
 const backend = fs.readdirSync(`${TEMPLATE_FOLDER}/backend`);
@@ -68,6 +69,8 @@ const extrasNameMapping = {
 
 const CURR_DIR = process.cwd();
 
+ascii()
+
 inquirer.prompt(QUESTIONS)
   .then( async ({
     monorepoName,
@@ -102,8 +105,8 @@ inquirer.prompt(QUESTIONS)
     )
 
     if (backendSelection === "node") {
-      fileChange(`${serverDestination}/package.json`, "{{AUTHOR}}", author)
-      fileChange(`${serverDestination}/package.json`, "{{LICENSE}}", license)
+      await fileChange(`${serverDestination}/package.json`, "{{AUTHOR}}", author)
+      await fileChange(`${serverDestination}/package.json`, "{{LICENSE}}", license)
     }
 
     ui.log.write('Done !!');

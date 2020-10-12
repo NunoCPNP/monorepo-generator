@@ -1,6 +1,6 @@
 {
   "name": "cli-monorepo-generator",
-  "version": "1.0.6",
+  "version": "1.0.83",
   "description": "CLI for Generating Mono Repositories",
   "main": "src/index.ts",
   "author": {
@@ -11,7 +11,8 @@
   "license": "MIT",
   "bin": "./dist/index.js",
   "files": [
-    "templates", "dist"
+    "templates",
+    "dist"
   ],
   "repository": {
     "type": "git",
@@ -26,13 +27,14 @@
     "monorepo"
   ],
   "engines": {
-    "node" : ">=8.0.0" 
+    "node": ">=8.0.0"
   },
   "scripts": {
     "start": "ts-node src/index.ts",
     "build": "tsc -p ."
   },
   "dependencies": {
+    "chalk": "^4.1.0",
     "inquirer": "^7.3.3",
     "ncp": "^2.0.0"
   },
