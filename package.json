@@ -1,10 +1,33 @@
 {
   "name": "cli-monorepo-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI for Generating Mono Repositories",
-  "main": "src/index.js",
-  "author": "Nuno Pereira <hello@nunopereira.tech>",
+  "main": "src/index.ts",
+  "author": {
+    "name": "Nuno Pereira",
+    "email": "hello@nunopereira.tech",
+    "url": "https://www.nunopereita.tech"
+  },
   "license": "MIT",
+  "bin": "./dist/index.js",
+  "files": [
+    "templates"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NunoCPNP/monorepo-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NunoCPNP/monorepo-generator/issues"
+  },
+  "homepage": "https://github.com/NunoCPNP/monorepo-generator",
+  "keywords": [
+    "monorepo-generator",
+    "monorepo"
+  ],
+  "engines": {
+    "node" : ">=8.0.0" 
+  },
   "scripts": {
     "dev": "ts-node src/index.ts",
     "start": "ts-node dist/index.js",
