@@ -1,6 +1,6 @@
 {
   "name": "cli-monorepo-generator",
-  "version": "1.0.83",
+  "version": "1.0.84",
   "description": "CLI for Generating Mono Repositories",
   "main": "src/index.ts",
   "author": {
