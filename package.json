@@ -1,6 +1,6 @@
 {
   "name": "cli-monorepo-generator",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "CLI for Generating Mono Repositories",
   "main": "src/index.ts",
   "author": {
@@ -30,9 +30,7 @@
   },
   "scripts": {
     "start": "ts-node src/index.ts",
-    "build": "tsc -p .",
-    "pack": "npm pack",
-    "publish": "npm publish"
+    "build": "tsc -p ."
   },
   "dependencies": {
     "inquirer": "^7.3.3",
